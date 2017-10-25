@@ -8,6 +8,12 @@ public class Player extends Deck{
 	public Player() {
 		super();
 	}
+	public int getUnplayedSize() {
+		return unplayedPile.size();
+	}
+	public int getWinningSize() {
+		return winningPile.size();
+	}
 	public void addToUnplayedPile(Card c) {
 		this.unplayedPile.add(0, c);
 	}
