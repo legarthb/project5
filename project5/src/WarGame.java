@@ -40,7 +40,7 @@ public class WarGame{
     public void transferCards(Player player) {
     	    player.addToWinningsPile(this.warPile.remove(0));
     }
-    public void winner() {
+    public boolean winner() {
         if (this.playerOne.isDone() || this.playerTwo.isDone()) {
             int countOne = this.playerOne.winningsCount();
             int countTwo = this.playerTwo.winningsCount();
@@ -53,6 +53,10 @@ public class WarGame{
             else {
                 System.out.println("The game ends in a tie!");
             }
+            return true;
+        }
+        else {
+        	return false;
         }
     }
 }
