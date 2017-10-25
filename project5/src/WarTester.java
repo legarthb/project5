@@ -4,8 +4,7 @@ public class WarTester{
         game.deal();
         while (! game.winner()) {
             game.Step();
-            game.toString();
+            System.out.println(game.toString());
         }
-        game.toString();
     }
 }
