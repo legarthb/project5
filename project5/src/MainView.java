@@ -4,8 +4,8 @@ import java.awt.event.*;
 
 /**
  * The main window for dealing from a deck of cards.
- * @author lambertk
- *
+ * @author Chris Randall
+ * @author Mark Donohue
  */
 public class MainView extends JFrame{
 

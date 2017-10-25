@@ -1,6 +1,5 @@
 import javax.swing.*;
-//Here is a comment
-//here is another
+
 /**
  * Represents a playing card with a suit,
  * rank, image, and face up status.
