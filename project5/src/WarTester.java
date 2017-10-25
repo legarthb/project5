@@ -1,3 +1,11 @@
+/**
+ * Terminal based tester application for top-level model class
+ * @author 
+ * @author 
+ * @author Mark Donohue
+ * @author
+ */
+
 
 public class WarTester{
     public static void main(String[] args) {

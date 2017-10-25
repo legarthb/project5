@@ -2,6 +2,10 @@
 import java.util.*;
 import javax.swing.*;
 
+/**
+ * 
+ */
+
 public class WarGame{
     
     //Creating the players
