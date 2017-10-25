@@ -4,15 +4,15 @@ import java.util.*;
 public class WarGame{
     
     //Creating the players
-    private Player playerOne;
-    private Player playerTwo;
+    private Player playerOne = new Player();
+    private Player playerTwo = new Player();
     private List<Card> warPile = new ArrayList<Card>();
     private String gameState = "";
-    private Deck deck;
+    private Deck deck = new Deck();
     public WarGame() {
-    	    deck.shuffle();
+    	    this.deck.shuffle();
     }
-    public String ToString() {
+    public String toString() {
         return gameState;
     }
     public void deal() {
@@ -31,11 +31,11 @@ public class WarGame{
             this.gameState += "\nCards added to War pile\n";
         else if (cardOne.getRank() > cardTwo.getRank()) {
             this.transferCards(playerOne);
-            this.gameState = "\nCards go to Player 1\n";
+            this.gameState += "\nCards go to Player 1\n";
         }
         else {
             this.transferCards(playerTwo);
-            this.gameState += "\nCards go to Player 2";
+            this.gameState += "\nCards go to Player 2\n";
         }
     }
     public void transferCards(Player player) {
