@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 /**
- * The main window for dealing from a deck of cards.
+ * The main window for playing a game of war with two players.
  * @author Chris Randall
  * @author Mark Donohue
  * @author Brian Legarth
@@ -15,7 +15,11 @@ public class MainView extends JFrame{
     private WarGame game;
     private Card cardOne;
     private Card cardTwo;
-
+    
+    /**
+     * Constructor. Sets up the necessary GUI conditions for our a game of war.
+     * @param deck - A deck of cards
+     */
     public MainView(Deck deck){
         gameDeck = deck;
         JPanel cont1 = new JPanel();

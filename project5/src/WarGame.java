@@ -3,7 +3,11 @@ import java.util.*;
 import javax.swing.*;
 
 /**
- * 
+ * Represents a game of war with playing cards.
+ * @author Brian Legarth
+ * @author Tommy Thetford
+ * @author Chris Randall
+ * @author Mark Donohue
  */
 
 public class WarGame{
@@ -17,24 +21,52 @@ public class WarGame{
     private String gameState = "";
     private Deck deck = new Deck();
     private int moveCount = 0;
+    
+    /**
+     * Constructor which shuffles the deck for play.
+     */
     public WarGame() {
     	    this.deck.shuffle();
     }
+    
+    /**
+     * Plays the instance variable Card CardOne
+     * @return cardOne - player one's card
+     */
     public Card playOneCard() {
     		return cardOne;
     }
+
+    /**
+     * Plays the instance variable Card CardTwo
+     * @return cardOne - player two's card
+     */
     public Card playTwoCard() {
     		return cardTwo;
     }
+    
+    /**
+     * Gives a string representation of the current game state.
+     * @return gameState - the current game state
+     */
     public String toString() {
         return gameState;
     }
+    
+    /**
+     * Deals out the cards to the players from the shuffled deck.
+     */
     public void deal() {
         while (! this.deck.isEmpty()){
             this.playerOne.addToUnplayedPile(this.deck.deal());
             this.playerTwo.addToUnplayedPile(this.deck.deal());
         }
     }
+    
+    /**
+     * Performs a move in the game of war, with both players playing
+     * cards and alters the game state according to the results of the move
+     */
     public void Step() {
     		moveCount += 1;
         cardOne = this.playerOne.getCard();
@@ -63,11 +95,21 @@ public class WarGame{
             this.gameState += "\n\nCards go to Player 2";
         }
     }
+    
+    /**
+     * Adds cards to the winnings pile of the necessary player.
+     * @param player - the player to whom the cards in the winings pile go
+     */
     public void transferCards(Player player) {
     		while (! this.warPile.isEmpty()) {
     			player.addToWinningsPile(this.warPile.remove(0));
     		}
     }
+    
+    /**
+     * Displays the results of the game
+     * @return a boolean value as to whether or not the game is over.
+     */
     public boolean winner() {
         if (this.playerOne.isDone() || this.playerTwo.isDone()) {
             int countOne = this.playerOne.winningsCount();

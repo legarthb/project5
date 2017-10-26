@@ -1,9 +1,9 @@
 /**
  * Terminal based tester application for top-level model class
- * @author 
- * @author 
+ * @author Brian Legarth
+ * @author Tommy Thetford
+ * @author Chris Randall
  * @author Mark Donohue
- * @author
  */
 
 
