@@ -9,6 +9,7 @@ import java.awt.event.*;
  * @author Brian Legarth
  * @author Tommy Thetford
  */
+
 public class MainView extends JFrame{
 
     private Deck gameDeck;

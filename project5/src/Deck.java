@@ -4,8 +4,12 @@ import javax.swing.*;
 /**
  * Represents a deck of playing cards.
  * @author lambertk
- *
+ * @author Brian Legarth
+ * @author Tommy Thetford
+ * @author Chris Randall
+ * @author Mark Donohue
  */
+
 public class Deck{
 
     private List<Card> deck;
@@ -21,6 +25,10 @@ public class Deck{
 	addSuit(Suit.club);
     }
 
+    /**
+     * Adds suit to each rank of a card
+     * @param suit
+     */
     private void addSuit(Suit suit){
 	for (int i = 1; i <= 13; i++)
 	    deck.add(new Card(suit, i));

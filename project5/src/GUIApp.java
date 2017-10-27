@@ -10,7 +10,6 @@ import javax.swing.JFrame;
  * @author Mark Donohue
  */
 
-
 public class GUIApp{
 
     public static void main(String[] args){

@@ -1,11 +1,14 @@
 import javax.swing.*;
 
 /**
- * Represents a playing card with a suit,
- * rank, image, and face up status.
+ * Represents a playing card with a suit, rank, image, and face up status.
  * @author lambertk
- *
+ * @author Brian Legarth
+ * @author Tommy Thetford
+ * @author Chris Randall
+ * @author Mark Donohue
  */
+
 public class Card implements Comparable<Card>{
 
     private Suit suit;
@@ -56,6 +59,12 @@ public class Card implements Comparable<Card>{
     	faceUp = ! faceUp;
     }
 
+    /**
+     * Obtains an image of a card from DECK folder
+     * @param rank the card's rank
+     * @param suit the card's suit
+     * @return ImageIcon the image of a card
+     */
     private Icon getImageFromFile(int rank, Suit suit){
     	String fileName = "DECK/";
     	fileName += rank;
@@ -64,6 +73,10 @@ public class Card implements Comparable<Card>{
     	return new ImageIcon(getClass().getResource(fileName));
     }
 
+    /**
+     * Obtains image of back of a card from DECK folder
+     * @return ImageIcon back of a card
+     */
     private Icon getBackFromFile(){
     	String fileName = "DECK/CARDBACK.GIF";
     	return new ImageIcon(getClass().getResource(fileName));
@@ -109,6 +122,11 @@ public class Card implements Comparable<Card>{
         return rankToString(rank) + " of " + suit;
     }
 
+    /**
+     * Determines face card by value of rank 
+     * @param rank
+     * @return string name of a face card
+     */
     static private String rankToString(int rank){
         if (rank >= 2 && rank <= 10) return rank + "";
         else if (rank == 11) return "Jack";

@@ -1,4 +1,3 @@
-
 import java.util.*;
 import javax.swing.*;
 
@@ -39,7 +38,7 @@ public class WarGame{
 
     /**
      * Plays the instance variable Card CardTwo
-     * @return cardOne - player two's card
+     * @return cardTwo - player two's card
      */
     public Card playTwoCard() {
     		return cardTwo;
@@ -54,7 +53,7 @@ public class WarGame{
     }
     
     /**
-     * Deals out the cards to the players from the shuffled deck.
+     * Deals out cards to the players from the shuffled deck.
      */
     public void deal() {
         while (! this.deck.isEmpty()){
@@ -68,7 +67,7 @@ public class WarGame{
      * cards and alters the game state according to the results of the move
      */
     public void Step() {
-    		moveCount += 1;
+    	moveCount += 1;
         cardOne = this.playerOne.getCard();
         cardTwo = this.playerTwo.getCard();
         this.gameState = "Player 1: \nCurrent Card: " 
@@ -98,7 +97,7 @@ public class WarGame{
     
     /**
      * Adds cards to the winnings pile of the necessary player.
-     * @param player - the player to whom the cards in the winings pile go
+     * @param player - the player to whom the cards in the wining pile go
      */
     public void transferCards(Player player) {
     		while (! this.warPile.isEmpty()) {

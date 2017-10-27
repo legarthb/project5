@@ -1,13 +1,12 @@
 import java.util.*;
 
 /**
- * Represents a player in the game of war.
+ * Represents a player in a game of war.
  * @author Brian Legarth
  * @author Tommy Thetford
  * @author Chris Randall
  * @author Mark Donohue
  */
-
 
 public class Player extends Deck{
 	

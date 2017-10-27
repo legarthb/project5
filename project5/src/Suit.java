@@ -1,10 +1,13 @@
 /**
  * Represents the four suits in a deck of cards.
- * They are ordered, in decreasing rank, from
- * spade to heart to diamond to club.
+ * They are ordered, in decreasing rank, from spade to heart to diamond to club.
  * @author lambertk
- *
+ * @author Brian Legarth
+ * @author Tommy Thetford
+ * @author Chris Randall
+ * @author Mark Donohue
  */
+
 public class Suit implements Comparable<Suit>{
 
 	/**

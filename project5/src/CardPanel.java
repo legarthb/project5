@@ -4,8 +4,12 @@ import java.awt.*;
 /**
  * Represents the GUI component for painting an image of a playing card.
  * @author lambertk
- *
+ * @author Brian Legarth
+ * @author Tommy Thetford
+ * @author Chris Randall
+ * @author Mark Donohue
  */
+
 public class CardPanel extends JPanel{
 
     private Card card;
