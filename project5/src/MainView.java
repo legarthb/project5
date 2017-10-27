@@ -44,12 +44,21 @@ public class MainView extends JFrame{
         cont2.add(p2);
         
         JTextField p3 = new JTextField();
+        p3.setEditable(false);
+        p3.setBackground(null);
+        p3.setHorizontalAlignment(JTextField.CENTER);
         p3.setText("Player 1");
         p3.setSize(200,50);
         JTextField p4 = new JTextField();
+        p4.setEditable(false);
+        p4.setBackground(null);
+        p4.setHorizontalAlignment(JTextField.CENTER);
         p4.setText("Status");
         p4.setSize(200,50);
         JTextField p5 = new JTextField();
+        p5.setEditable(false);
+        p5.setBackground(null);
+        p5.setHorizontalAlignment(JTextField.CENTER);
         p5.setText("Player 2");
         p5.setSize(200,50);
         cont1.add(p3);
